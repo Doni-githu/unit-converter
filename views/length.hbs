@@ -1,0 +1,43 @@
+{{#if result}}
+<h1>Result {{result}} </h1>
+<form target="_self" method="get">
+    <button id="reset" type="submit">Reset</button>
+</form>
+{{else}}
+<form target="_self" method="post" class="form">
+    <div class="form-item">
+        <label>Enter the length to convert</label>
+        <input type="number" required id="len" name="len">
+    </div>
+    <div class="form-item">
+        <label>Unit to Convert from</label>
+        <select name="from" required id="from">
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="sm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+            <option value="mili">Mili</option>
+            <option value="yard">Yard</option>
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+        </select>
+    </div>
+    <div class="form-item">
+        <label>Unit to Convert to</label>
+        <select name="to" required id="to">
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="sm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+            <option value="mili">Mili</option>
+            <option value="yard">Yard</option>
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Convert</button>
+    </div>
+</form>
+
+{{/if}}

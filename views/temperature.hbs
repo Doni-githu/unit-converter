@@ -1,0 +1,32 @@
+{{#if result}}
+<h1>Result {{result}}</h1>
+<form target="_self">
+    <button type="submit">Reset</button>
+</form>
+{{else}}
+<form target="_self" method="post">
+    <div class="form-item">
+        <label>Enter the temperature to convert</label>
+        <input type="number" required id="temperature" name="temperature">
+    </div>
+    <div class="form-item">
+        <label>Unit to Converter from</label>
+        <select name="from" required id="from">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+    </div>
+    <div class="form-item">
+        <label>Unit to Converter to</label>
+        <select name="to" required id="to">
+           <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Convert</button>
+    </div>
+</form>
+{{/if}}

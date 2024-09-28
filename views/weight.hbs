@@ -1,0 +1,36 @@
+{{#if result}}
+<h1>Result {{result}}</h1>
+<form target="_self">
+    <button type="submit">Reset</button>
+</form>
+{{else}}
+<form target="_self" method="post">
+    <div class="form-item">
+        <label>Enter the weight to convert</label>
+        <input type="number" required id="weight" name="weight">
+    </div>
+    <div class="form-item">
+        <label>Unit to Converter from</label>
+        <select name="from" required id="from">
+            <option value="g">gram</option>
+            <option value="mg">milligram</option>
+            <option value="kg">kilogram</option>
+            <option value="Oz">ounce</option>
+            <option value="lb">pound</option>
+        </select>
+    </div>
+    <div class="form-item">
+        <label>Unit to Converter to</label>
+        <select name="to" required id="to">
+            <option value="g">gram</option>
+            <option value="mg">milligram</option>
+            <option value="kg">kilogram</option>
+            <option value="Oz">ounce</option>
+            <option value="lb">pound</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Convert</button>
+    </div>
+</form>
+{{/if}}
